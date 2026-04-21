@@ -9,11 +9,9 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 py-4 backdrop-blur-md bg-[var(--bg-base)]/80 border-b border-[var(--bg-surface)]">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
-        <div className="text-lg md:text-xl font-bold tracking-tight text-[var(--text-base)] shrink-0">
-          <span className="text-[var(--brand-primary)]">&lt;</span>
-          Sushant Singh
-          <span className="text-[var(--brand-secondary)]"> /&gt;</span>
-        </div>
+        <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); setMenuOpen(false); }} className="text-lg md:text-xl font-medium tracking-tight text-[var(--text-base)] shrink-0 hover:opacity-80 transition-opacity cursor-pointer">
+          sushant<span className="text-[var(--brand-primary)]">.</span>
+        </a>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-6">
