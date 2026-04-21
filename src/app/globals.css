@@ -21,9 +21,9 @@
   --text-base: #0f172a;
   --text-muted: #475569;
   
-  --brand-primary: #51a2e9;
-  --brand-secondary: #6366f1; /* deeper indigo for light mode contrast */
-  --brand-accent: #0ea5e9; /* rich sky blue */
+  --brand-primary: #3b82f6; /* vivid blue */
+  --brand-secondary: #6366f1; /* deep indigo */
+  --brand-accent: #10b981; /* emerald green */
 }
 
 .dark {
@@ -32,9 +32,9 @@
   --text-base: #fafafa;
   --text-muted: #a3a3a3;
   
-  --brand-primary: #51a2e9;
-  --brand-secondary: #818cf8; /* indigo */
-  --brand-accent: #38bdf8; /* sky cyan */
+  --brand-primary: #60a5fa; /* soft blue */
+  --brand-secondary: #a78bfa; /* lavender purple */
+  --brand-accent: #34d399; /* soft mint green */
 }
 
 body {
