@@ -7,25 +7,62 @@ export default function Home() {
       {/* Hero Splash Page */}
       <section className="relative min-h-screen flex flex-col justify-center overflow-hidden border-b border-[var(--bg-surface)]">
         <ParticleBackground />
-        <div className="max-w-6xl w-full mx-auto px-6 relative z-10 animate-fade-in-up">
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 mt-[-10vh]">
-            Architecting <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)]">Scale</span> & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--brand-secondary)] to-[var(--brand-accent)]">Velocity</span>.
-          </h1>
-          <p className="text-xl md:text-2xl text-[var(--text-muted)] max-w-3xl mb-10 leading-relaxed">
-            I am <strong className="text-[var(--text-base)]">Sushant Singh</strong>, a Senior Backend Engineer obsessed with building resilient, high-throughput microservices and data pipelines that drive real product impact.
-          </p>
-          <div className="flex gap-4">
-            <a href="#projects" className="px-8 py-4 rounded-lg bg-[var(--brand-primary)] text-[var(--bg-base)] font-bold hover:opacity-90 transition-colors shadow-lg shadow-[var(--brand-primary)]/30">
-              View My Work
-            </a>
-            <a href="#connect" className="px-8 py-4 rounded-lg border border-[var(--brand-secondary)] text-[var(--brand-secondary)] font-bold hover:bg-[var(--brand-secondary)]/10 transition-colors">
-              Get in Touch
-            </a>
+        <div className="max-w-6xl w-full mx-auto px-6 flex flex-col items-center text-center relative z-10 animate-fade-in-up">
+          <div className="text-5xl md:text-7xl font-light tracking-tight mb-4 mt-[-10vh] text-[var(--text-base)]">
+            Hello, I'm <span className="text-[var(--brand-primary)] font-medium">Sushant</span>.
           </div>
+          <div className="text-4xl md:text-6xl font-light text-[var(--text-muted)] mb-12">
+            Architecting scale & velocity.
+          </div>
+          <a href="#about" className="group relative flex items-center gap-3 px-8 py-4 bg-[var(--bg-surface)]/20 hover:bg-[var(--bg-surface)]/80 border border-[var(--brand-secondary)] backdrop-blur-sm transition-all text-[var(--brand-secondary)] text-2xl font-light overflow-hidden">
+             View my work
+             <svg className="w-6 h-6 transform group-hover:translate-y-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+             <div className="absolute inset-0 border border-[var(--brand-secondary)] opacity-0 group-hover:opacity-100 shadow-[0_0_15px_var(--brand-secondary)] transition-opacity pointer-events-none"></div>
+          </a>
         </div>
       </section>
 
       <div className="max-w-6xl mx-auto px-6 py-24 space-y-32 relative z-10">
+
+      {/* About Section */}
+      <section id="about" className="scroll-mt-32">
+        <div className="flex items-center gap-4 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold">About</h2>
+          <div className="h-px bg-[var(--bg-surface)] flex-grow mt-2"></div>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="text-lg text-[var(--text-muted)] leading-relaxed mb-6">
+              I'm a senior backend engineer specializing in designing and scaling high-throughput distributed systems. Whether it's decoupling legacy monoliths into robust microservice architectures or constructing fault-tolerant data pipelines processing hundreds of gigabytes per hour, my focus lies entirely on backend resilience and engineering velocity.
+            </p>
+            <p className="text-lg text-[var(--text-muted)] leading-relaxed">
+              When I'm not untangling profound database bottlenecks, optimizing OpenSearch queries, or orchestrating containers smoothly, I continuously strive to master the intricacies of modern architectural patterns.
+            </p>
+          </div>
+          
+          <div className="bg-[var(--bg-surface)] p-8 rounded-xl shadow-lg border border-[var(--bg-surface)]">
+            <h3 className="text-xl font-bold mb-6 text-[var(--text-base)]">Core Arsenal</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              {[
+                { name: "Node.js", accent: "primary" },
+                { name: "Python", accent: "secondary" }, 
+                { name: "Redis", accent: "primary" },
+                { name: "AWS", accent: "primary" },
+                { name: "MySQL", accent: "secondary" },
+                { name: "PostgreSQL", accent: "primary" },
+                { name: "Docker", accent: "primary" },
+                { name: "Kubernetes", accent: "secondary" },
+                { name: "React", accent: "primary" }
+              ].map(skill => (
+                <div key={skill.name} className={`flex flex-col items-center justify-center p-4 rounded-lg bg-[var(--bg-base)] border border-transparent hover:border-[var(--brand-${skill.accent})] transition-colors group cursor-default shadow-sm hover:shadow-[0_0_8px_var(--brand-${skill.accent})]`}>
+                  <span className="font-mono text-sm font-medium text-[var(--text-muted)] group-hover:text-[var(--text-base)] transition-colors">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Experience Section */}
       <section id="experience" className="scroll-mt-32">
@@ -168,22 +205,37 @@ export default function Home() {
             <h3 className="text-2xl font-bold mb-6">Send a Quick Message</h3>
             <form className="space-y-4">
               <div>
+                <label className="block text-sm font-medium text-[var(--text-muted)] mb-1" htmlFor="name">Name *</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name"
+                  className="w-full px-4 py-3 rounded-lg bg-[var(--bg-base)] border border-[var(--bg-base)] focus:border-[var(--brand-primary)] focus:ring-1 focus:ring-[var(--brand-primary)] outline-none transition-colors text-[var(--text-base)]"
+                  placeholder="Jane Doe"
+                  required
+                />
+              </div>
+              <div>
                 <label className="block text-sm font-medium text-[var(--text-muted)] mb-1" htmlFor="contact">Email or Phone *</label>
                 <input 
                   type="text" 
                   id="contact" 
+                  name="contact"
                   className="w-full px-4 py-3 rounded-lg bg-[var(--bg-base)] border border-[var(--bg-base)] focus:border-[var(--brand-primary)] focus:ring-1 focus:ring-[var(--brand-primary)] outline-none transition-colors text-[var(--text-base)]"
                   placeholder="name@company.com"
                   required
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-[var(--text-muted)] mb-1" htmlFor="message">Message</label>
+                <label className="block text-sm font-medium text-[var(--text-muted)] mb-1" htmlFor="message">Message *</label>
                 <textarea 
                   id="message" 
+                  name="message"
                   rows={4}
                   className="w-full px-4 py-3 rounded-lg bg-[var(--bg-base)] border border-[var(--bg-base)] focus:border-[var(--brand-primary)] focus:ring-1 focus:ring-[var(--brand-primary)] outline-none transition-colors resize-none text-[var(--text-base)]"
-                  placeholder="Hey Sushant, loved your work on the 0-to-1 microservices platform. Let's chat about a role at our startup!"
+                  placeholder="Hi Sushant, I would love to connect to discuss..."
+                  required
+                  minLength={10}
                 ></textarea>
               </div>
               <button 

@@ -32,7 +32,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-full bg-[var(--bg-surface)] text-[var(--brand-primary)] hover:scale-110 transition-transform focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)] cursor-pointer shadow-md shadow-[var(--brand-primary)]/20"
+      className="p-2 rounded-full bg-[var(--bg-surface)] text-[var(--brand-primary)] hover:scale-110 transition-transform focus:outline-none cursor-pointer shadow-md shadow-[var(--brand-primary)]/20"
       aria-label="Toggle Theme"
       title="Toggle Cyber/Vibrant Mode"
     >

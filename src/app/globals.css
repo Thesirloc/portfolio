@@ -3,6 +3,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
+  
   --color-brand-primary: var(--brand-primary);
   --color-brand-secondary: var(--brand-secondary);
   --color-brand-accent: var(--brand-accent);
@@ -18,20 +21,20 @@
   --text-base: #0f172a;
   --text-muted: #475569;
   
-  --brand-primary: #ff5100;
-  --brand-secondary: #0044ff;
-  --brand-accent: #ffb703;
+  --brand-primary: #51a2e9;
+  --brand-secondary: #6366f1; /* deeper indigo for light mode contrast */
+  --brand-accent: #0ea5e9; /* rich sky blue */
 }
 
 .dark {
-  --bg-base: #0b1120;
-  --bg-surface: #1e293b;
-  --text-base: #f8fafc;
-  --text-muted: #94a3b8;
+  --bg-base: #1a1a1a;
+  --bg-surface: #282828;
+  --text-base: #fafafa;
+  --text-muted: #a3a3a3;
   
-  --brand-primary: #00f0ff;
-  --brand-secondary: #ff003c;
-  --brand-accent: #d946ef;
+  --brand-primary: #51a2e9;
+  --brand-secondary: #818cf8; /* indigo */
+  --brand-accent: #38bdf8; /* sky cyan */
 }
 
 body {
