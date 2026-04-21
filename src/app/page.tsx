@@ -1,25 +1,31 @@
 import React from 'react';
+import ParticleBackground from '@/components/ParticleBackground';
 
 export default function Home() {
   return (
-    <div className="max-w-6xl mx-auto px-6 pb-24 space-y-32">
-      {/* Hero Section */}
-      <section className="pt-20 md:pt-32 animate-fade-in-up">
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
-          Architecting <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)]">Scale</span> & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--brand-secondary)] to-[var(--brand-accent)]">Velocity</span>.
-        </h1>
-        <p className="text-xl md:text-2xl text-[var(--text-muted)] max-w-3xl mb-10 leading-relaxed">
-          I am <strong className="text-[var(--text-base)]">Sushant Singh</strong>, a Senior Backend Engineer obsessed with building resilient, high-throughput microservices and data pipelines that drive real product impact.
-        </p>
-        <div className="flex gap-4">
-          <a href="#projects" className="px-8 py-4 rounded-lg bg-[var(--brand-primary)] text-[var(--bg-base)] font-bold hover:opacity-90 transition-colors shadow-lg shadow-[var(--brand-primary)]/30">
-            View My Work
-          </a>
-          <a href="#connect" className="px-8 py-4 rounded-lg border border-[var(--brand-secondary)] text-[var(--brand-secondary)] font-bold hover:bg-[var(--brand-secondary)]/10 transition-colors">
-            Get in Touch
-          </a>
+    <main className="relative">
+      {/* Hero Splash Page */}
+      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden border-b border-[var(--bg-surface)]">
+        <ParticleBackground />
+        <div className="max-w-6xl w-full mx-auto px-6 relative z-10 animate-fade-in-up">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 mt-[-10vh]">
+            Architecting <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)]">Scale</span> & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--brand-secondary)] to-[var(--brand-accent)]">Velocity</span>.
+          </h1>
+          <p className="text-xl md:text-2xl text-[var(--text-muted)] max-w-3xl mb-10 leading-relaxed">
+            I am <strong className="text-[var(--text-base)]">Sushant Singh</strong>, a Senior Backend Engineer obsessed with building resilient, high-throughput microservices and data pipelines that drive real product impact.
+          </p>
+          <div className="flex gap-4">
+            <a href="#projects" className="px-8 py-4 rounded-lg bg-[var(--brand-primary)] text-[var(--bg-base)] font-bold hover:opacity-90 transition-colors shadow-lg shadow-[var(--brand-primary)]/30">
+              View My Work
+            </a>
+            <a href="#connect" className="px-8 py-4 rounded-lg border border-[var(--brand-secondary)] text-[var(--brand-secondary)] font-bold hover:bg-[var(--brand-secondary)]/10 transition-colors">
+              Get in Touch
+            </a>
+          </div>
         </div>
       </section>
+
+      <div className="max-w-6xl mx-auto px-6 py-24 space-y-32 relative z-10">
 
       {/* Experience Section */}
       <section id="experience" className="scroll-mt-32">
@@ -202,5 +208,6 @@ export default function Home() {
       </section>
 
     </div>
+    </main>
   );
 }
