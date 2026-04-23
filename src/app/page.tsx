@@ -12,11 +12,8 @@ export default function Home() {
           <div className="text-5xl md:text-7xl font-light tracking-tight mb-4 mt-[-10vh] text-[var(--text-base)]">
             Hello, I'm Sushant.
           </div>
-          <div className="text-4xl md:text-6xl font-light mb-12">
-            <span className="text-[var(--brand-primary)]">Building</span>{" "}
-            <span className="text-[var(--brand-secondary)]">what</span>{" "}
-            <span className="text-[var(--brand-accent)] font-bold">matters</span>
-            <span className="text-[var(--text-muted)]">, at scale.</span>
+          <div className="text-4xl md:text-6xl font-light text-[var(--text-muted)] mb-12">
+            Building what <span className="font-semibold text-[var(--brand-accent)]">matters</span>, at scale.
           </div>
           <a href="#about" className="group relative flex items-center gap-3 px-8 py-4 rounded-lg bg-[var(--bg-surface)]/20 hover:bg-[var(--bg-surface)]/80 border border-[var(--brand-secondary)] backdrop-blur-sm transition-all text-[var(--brand-secondary)] text-2xl font-light overflow-hidden">
             View my work
@@ -38,11 +35,11 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-lg text-[var(--text-muted)] leading-relaxed mb-6">
-                I'm a senior backend engineer specializing in designing and scaling high-throughput distributed systems. Whether it's decoupling legacy monoliths into robust microservice architectures or constructing fault-tolerant data pipelines processing hundreds of gigabytes per hour, my focus lies entirely on backend resilience and engineering velocity.
+                I am a Software Engineer with a passion for building high scale distributed systems and 0-to-1 products. Currently, at Deloitte’s Disruption Office, I bridge the gap between complex business strategy and technical execution, leading engineering pods to ship enterprise-grade platforms with or without AI.
               </p>
               <p className="text-lg text-[var(--text-muted)] leading-relaxed">
-                When I'm not untangling profound database bottlenecks, optimizing OpenSearch queries, or orchestrating containers smoothly, I continuously strive to master the intricacies of modern architectural patterns.
-              </p>
+                My engineering philosophy centers on efficiency and reliability. Whether it’s architecting microservices to handle AI clusters, building ETL pipelines that process large datasets, or automating CI/CD workflows to unlock a higher release velocity, I focus on systems that scale without breaking. I thrive in environments where I can own the entire lifecycle—from initial schema design to cloud infrastructure orchestration.
+                When I’m not optimizing SQL databases or refactoring code, you’ll likely find me on the football pitch or exploring the intersections of tech and other industries.</p>
             </div>
 
             <div className="bg-[var(--bg-surface)] p-8 rounded-lg shadow-lg border border-[var(--bg-surface)]">

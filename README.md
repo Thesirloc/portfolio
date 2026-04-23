@@ -1,6 +1,6 @@
 # Sushant Singh - Senior Software Engineer Portfolio 🚀
 
-A high-performance, aesthetically vibrant personal portfolio designed to showcase deep technical architecture and engineering velocity.
+This is my personal portfolio. If you wish to build a similar one, feel free to fork.
 
 ## Features
 - **Dynamic Theming:** Seamless Cyber (Dark) and Vibrant (Light) mode transitions via Tailwind CSS v4.
