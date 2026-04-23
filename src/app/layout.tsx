@@ -43,6 +43,11 @@ export default function RootLayout({
             `,
           }}
         />
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "422d8cdf9caf4acdb3ca9872c90ab8f9"}'
+        />
       </head>
       <body className="min-h-full flex flex-col font-sans">
         <Navbar />
