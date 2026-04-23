@@ -32,27 +32,38 @@ export default function Home() {
             <div className="h-px bg-[var(--bg-surface)] flex-grow mt-2"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-lg text-[var(--text-muted)] leading-relaxed mb-6">
-                I am a Software Engineer with a passion for building high scale distributed systems and 0-to-1 products. Currently, at Deloitte’s Disruption Office, I bridge the gap between complex business strategy and technical execution, leading engineering pods to ship enterprise-grade platforms with or without AI.
-              </p>
-              <p className="text-lg text-[var(--text-muted)] leading-relaxed">
-                My engineering philosophy centers on efficiency and reliability. Whether it’s architecting microservices to handle AI clusters, building ETL pipelines that process large datasets, or automating CI/CD workflows to unlock a higher release velocity, I focus on systems that scale without breaking. I thrive in environments where I can own the entire lifecycle—from initial schema design to cloud infrastructure orchestration.
-                When I’m not optimizing SQL databases or refactoring code, you’ll likely find me on the football pitch or exploring the intersections of tech and other industries.</p>
-            </div>
+          <p className="text-lg text-[var(--text-muted)] leading-relaxed mb-10 max-w-3xl">
+            Senior Backend Developer at <span className="text-[var(--text-base)] font-medium">Deloitte's Disruption Office</span>, turning complex business problems into resilient, production-grade platforms. I own the full lifecycle — from schema design to cloud orchestration.
+          </p>
 
-            <div className="bg-[var(--bg-surface)] p-8 rounded-lg shadow-lg border border-[var(--bg-surface)]">
-              <h3 className="text-xl font-bold mb-6 text-[var(--text-base)]">Core Arsenal</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {[
-                  "Node.js", "Python", "Redis", "AWS", "MySQL", "PostgreSQL", "Docker", "Kubernetes", "React"
-                ].map(skill => (
-                  <div key={skill} className="flex flex-col items-center justify-center p-4 rounded-lg bg-[var(--bg-base)] border border-transparent hover:border-[var(--brand-primary)] transition-all group cursor-default shadow-sm hover:shadow-[0_0_8px_var(--brand-primary)]">
-                    <span className="font-mono text-sm font-medium text-[var(--text-muted)] group-hover:text-[var(--text-base)] transition-colors">{skill}</span>
-                  </div>
-                ))}
-              </div>
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-[var(--bg-surface)] p-6 rounded-lg border border-[var(--bg-surface)] hover:border-[var(--brand-primary)]/30 transition-colors">
+              <div className="text-2xl mb-3">⚡</div>
+              <h3 className="font-bold text-[var(--text-base)] mb-2">Distributed Systems</h3>
+              <p className="text-sm text-[var(--text-muted)]">Microservices, event-driven architectures, and ETL pipelines processing big data.</p>
+            </div>
+            <div className="bg-[var(--bg-surface)] p-6 rounded-lg border border-[var(--bg-surface)] hover:border-[var(--brand-secondary)]/30 transition-colors">
+              <div className="text-2xl mb-3">🔧</div>
+              <h3 className="font-bold text-[var(--text-base)] mb-2">0-to-1 Products</h3>
+              <p className="text-sm text-[var(--text-muted)]">Leading engineering pods to ship enterprise platforms — with or without AI — in aggressive timelines.</p>
+            </div>
+            <div className="bg-[var(--bg-surface)] p-6 rounded-lg border border-[var(--bg-surface)] hover:border-[var(--brand-accent)]/30 transition-colors">
+              <div className="text-2xl mb-3">🏗️</div>
+              <h3 className="font-bold text-[var(--text-base)] mb-2">Infrastructure</h3>
+              <p className="text-sm text-[var(--text-muted)]">AWS, Docker, Kubernetes, CI/CD automation — systems that scale without breaking.</p>
+            </div>
+          </div>
+
+          <div className="bg-[var(--bg-surface)] p-6 rounded-lg border border-[var(--bg-surface)]">
+            <h3 className="text-lg font-bold mb-4 text-[var(--text-base)]">Core Arsenal</h3>
+            <div className="flex flex-wrap gap-3">
+              {[
+                "AWS", "Docker", "Kubernetes", "Redis", "Node.js", "Python", "MySQL", "PostgreSQL", "React", "AI"
+              ].map(skill => (
+                <div key={skill} className="px-4 py-2 rounded-lg bg-[var(--bg-base)] border border-transparent hover:border-[var(--brand-primary)] transition-all group cursor-default shadow-sm hover:shadow-[0_0_8px_var(--brand-primary)]">
+                  <span className="font-mono text-sm font-medium text-[var(--text-muted)] group-hover:text-[var(--text-base)] transition-colors">{skill}</span>
+                </div>
+              ))}
             </div>
           </div>
         </section>
