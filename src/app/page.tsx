@@ -13,7 +13,7 @@ export default function Home() {
             Hello, I'm Sushant.
           </div>
           <div className="text-4xl md:text-6xl font-light text-[var(--text-muted)] mb-12">
-            Building what <span className="font-semibold text-[var(--brand-accent)]">matters</span>, at scale.
+            Building what <span className="font-semibold text-[var(--brand-primary)]">matters</span>, at scale.
           </div>
           <a href="#about" className="group relative flex items-center gap-3 px-8 py-4 rounded-lg bg-[var(--bg-surface)]/20 hover:bg-[var(--bg-surface)]/80 border border-[var(--brand-secondary)] backdrop-blur-sm transition-all text-[var(--brand-secondary)] text-2xl font-light overflow-hidden">
             View my work
