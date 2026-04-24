@@ -37,21 +37,21 @@ export default function Home() {
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-[var(--bg-surface)] p-6 rounded-lg border border-[var(--bg-surface)] hover:border-[var(--brand-primary)]/30 transition-colors">
+            <a href="#case-microservices" className="bg-[var(--bg-surface)] p-6 rounded-lg border border-[var(--bg-surface)] hover:border-[var(--brand-primary)]/30 transition-all hover:-translate-y-1 cursor-pointer group">
               <div className="text-2xl mb-3">⚡</div>
-              <h3 className="font-bold text-[var(--text-base)] mb-2">Distributed Systems</h3>
+              <h3 className="font-bold text-[var(--text-base)] mb-2 group-hover:text-[var(--brand-primary)] transition-colors">Distributed Systems</h3>
               <p className="text-sm text-[var(--text-muted)]">Microservices, event-driven architectures, and ETL pipelines processing big data.</p>
-            </div>
-            <div className="bg-[var(--bg-surface)] p-6 rounded-lg border border-[var(--bg-surface)] hover:border-[var(--brand-secondary)]/30 transition-colors">
+            </a>
+            <a href="#case-etl" className="bg-[var(--bg-surface)] p-6 rounded-lg border border-[var(--bg-surface)] hover:border-[var(--brand-secondary)]/30 transition-all hover:-translate-y-1 cursor-pointer group">
               <div className="text-2xl mb-3">🔧</div>
-              <h3 className="font-bold text-[var(--text-base)] mb-2">0-to-1 Products</h3>
+              <h3 className="font-bold text-[var(--text-base)] mb-2 group-hover:text-[var(--brand-secondary)] transition-colors">0-to-1 Products</h3>
               <p className="text-sm text-[var(--text-muted)]">Leading engineering pods to ship enterprise platforms — with or without AI — in aggressive timelines.</p>
-            </div>
-            <div className="bg-[var(--bg-surface)] p-6 rounded-lg border border-[var(--bg-surface)] hover:border-[var(--brand-accent)]/30 transition-colors">
+            </a>
+            <a href="#case-n1" className="bg-[var(--bg-surface)] p-6 rounded-lg border border-[var(--bg-surface)] hover:border-[var(--brand-accent)]/30 transition-all hover:-translate-y-1 cursor-pointer group">
               <div className="text-2xl mb-3">🏗️</div>
-              <h3 className="font-bold text-[var(--text-base)] mb-2">Infrastructure</h3>
+              <h3 className="font-bold text-[var(--text-base)] mb-2 group-hover:text-[var(--brand-accent)] transition-colors">Infrastructure</h3>
               <p className="text-sm text-[var(--text-muted)]">AWS, Docker, Kubernetes, CI/CD automation — systems that scale without breaking.</p>
-            </div>
+            </a>
           </div>
 
           <div className="bg-[var(--bg-surface)] p-6 rounded-lg border border-[var(--bg-surface)]">
@@ -70,61 +70,235 @@ export default function Home() {
 
         {/* Experience Section */}
         <section id="experience" className="scroll-mt-32">
-          <div className="flex items-center gap-4 mb-12">
+          <div className="flex items-center gap-4 mb-6">
             <h2 className="text-3xl md:text-4xl font-bold">Experience</h2>
             <div className="h-px bg-[var(--bg-surface)] flex-grow mt-2"></div>
           </div>
 
-          <div className="space-y-16">
-            {/* Deloitte Case Study 1 */}
-            <div className="relative pl-8 md:pl-0">
-              <div className="md:grid md:grid-cols-4 md:items-baseline gap-8">
-                <div className="md:col-span-1 text-[var(--text-muted)] font-mono text-sm mb-2 md:mb-0">
-                  Jul 2023 - Present
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-[var(--text-base)] mb-1">Senior Backend Engineer</h3>
+            <div className="flex items-center gap-3 mb-2">
+              <span className="text-[var(--brand-primary)] font-semibold text-lg">Deloitte — Disruption Office</span>
+              <span className="text-[var(--text-muted)] font-mono text-sm">Jul 2023 – Present</span>
+            </div>
+            <p className="text-[var(--text-muted)] max-w-3xl">
+              Engineering lead across multiple high-stakes enterprise transformation programs. Responsible for end-to-end system design, cloud infrastructure, and shipping production-grade platforms under aggressive deadlines.
+            </p>
+          </div>
+
+          {/* Timeline */}
+          <div className="pl-6 timeline-line space-y-12">
+
+            {/* Case Study 1: Microservices */}
+            <div id="case-microservices" className="relative scroll-mt-32 animate-fade-in-up">
+              <div className="timeline-dot" style={{borderColor: 'var(--brand-primary)'}}></div>
+              <div className="case-study-card bg-[var(--bg-surface)] rounded-lg border border-[var(--bg-surface)] overflow-hidden">
+                {/* Header */}
+                <div className="bg-gradient-to-r from-[var(--brand-primary)]/10 to-transparent p-6 md:p-8 border-b border-[var(--bg-base)]">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-[var(--brand-primary)]/15 text-[var(--brand-primary)] border border-[var(--brand-primary)]/20">Case Study</span>
+                    <span className="text-xs font-mono text-[var(--text-muted)]">3 months</span>
+                  </div>
+                  <h4 className="text-xl md:text-2xl font-bold text-[var(--text-base)]">0-to-1 Microservices Platform</h4>
+                  <p className="text-sm text-[var(--text-muted)] mt-1">Replacing legacy enterprise systems with a modern, cloud-native architecture</p>
                 </div>
-                <div className="md:col-span-3">
-                  <h3 className="text-2xl font-bold text-[var(--text-base)]">Senior Backend Engineer <span className="text-[var(--brand-primary)]">@ Deloitte (Disruption Office)</span></h3>
 
-                  <div className="mt-6 space-y-8">
-                    <div className="bg-[var(--bg-surface)] p-6 rounded-lg border border-[var(--bg-surface)] shadow-sm hover:shadow-md transition-shadow">
-                      <h4 className="font-bold text-lg mb-2 text-[var(--brand-secondary)]">Case Study: 0-to-1 Microservices Platform</h4>
-                      <p className="text-[var(--text-muted)] mb-4">
-                        Legacy SAP/Salesforce systems were throttling operations. I architected and shipped a complete Node.js microservices platform on AWS in just 3 months. By decentralizing domain logic and implementing robust API gateways, we generated an estimated <strong>$400k in annual cost savings</strong> and drastically reduced operational latency.
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {["AWS", "Node.js", "Microservices"].map(tech => (
-                          <span key={tech} className="px-3 py-1 rounded-lg text-xs font-mono bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] border border-[var(--brand-primary)]/20">{tech}</span>
-                        ))}
+                {/* Body */}
+                <div className="p-6 md:p-8 space-y-6">
+                  {/* Challenge */}
+                  <div>
+                    <h5 className="text-sm font-bold uppercase tracking-wider text-[var(--brand-secondary)] mb-2">The Challenge</h5>
+                    <p className="text-[var(--text-muted)] leading-relaxed">
+                      The organization's operations were tightly coupled to legacy SAP and Salesforce monoliths. Cross-system data flows relied on fragile point-to-point integrations, causing cascading failures during peak load. Teams were spending 60% of engineering hours on maintenance instead of feature development, and the licensing overhead was bleeding $400k+ annually.
+                    </p>
+                  </div>
+
+                  {/* Approach */}
+                  <div>
+                    <h5 className="text-sm font-bold uppercase tracking-wider text-[var(--brand-secondary)] mb-2">Technical Approach</h5>
+                    <ul className="space-y-2 text-[var(--text-muted)]">
+                      <li className="flex gap-2"><span className="text-[var(--brand-primary)] mt-1 shrink-0">▸</span>Decomposed the monolith into 8 bounded-context microservices using domain-driven design principles</li>
+                      <li className="flex gap-2"><span className="text-[var(--brand-primary)] mt-1 shrink-0">▸</span>Built a centralized API Gateway with rate limiting, JWT authentication, and request routing</li>
+                      <li className="flex gap-2"><span className="text-[var(--brand-primary)] mt-1 shrink-0">▸</span>Implemented event-driven communication via message queues to decouple service dependencies</li>
+                      <li className="flex gap-2"><span className="text-[var(--brand-primary)] mt-1 shrink-0">▸</span>Containerized all services with Docker and orchestrated deployments on AWS ECS with auto-scaling groups</li>
+                    </ul>
+                  </div>
+
+                  {/* Results */}
+                  <div>
+                    <h5 className="text-sm font-bold uppercase tracking-wider text-[var(--brand-secondary)] mb-3">Impact & Results</h5>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      <div className="text-center p-4 rounded-lg bg-[var(--bg-base)]">
+                        <div className="text-2xl font-bold text-[var(--brand-primary)]">$400K</div>
+                        <div className="text-xs text-[var(--text-muted)] mt-1">Annual savings</div>
+                      </div>
+                      <div className="text-center p-4 rounded-lg bg-[var(--bg-base)]">
+                        <div className="text-2xl font-bold text-[var(--brand-primary)]">3 mo</div>
+                        <div className="text-xs text-[var(--text-muted)] mt-1">Delivery timeline</div>
+                      </div>
+                      <div className="text-center p-4 rounded-lg bg-[var(--bg-base)]">
+                        <div className="text-2xl font-bold text-[var(--brand-primary)]">8</div>
+                        <div className="text-xs text-[var(--text-muted)] mt-1">Microservices shipped</div>
+                      </div>
+                      <div className="text-center p-4 rounded-lg bg-[var(--bg-base)]">
+                        <div className="text-2xl font-bold text-[var(--brand-primary)]">60%</div>
+                        <div className="text-xs text-[var(--text-muted)] mt-1">Less maintenance</div>
                       </div>
                     </div>
+                  </div>
 
-                    <div className="bg-[var(--bg-surface)] p-6 rounded-lg border border-[var(--bg-surface)] shadow-sm hover:shadow-md transition-shadow">
-                      <h4 className="font-bold text-lg mb-2 text-[var(--brand-secondary)]">Case Study: Distributed ETL at 300+ GB/hr</h4>
-                      <p className="text-[var(--text-muted)] mb-4">
-                        Data fragmentation across heterogeneous databases (SQL, NoSQL), external APIs, and flat files was leading to severe data loss. I designed distributed Python ETL pipelines processing 300+ GB/hr. Implementing automated reconciliation protocols across 3M+ records entirely eliminated data loss and provided teams with real-time, synchronized reporting.
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {["Python", "Docker", "Serverless"].map(tech => (
-                          <span key={tech} className="px-3 py-1 rounded-lg text-xs font-mono bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] border border-[var(--brand-primary)]/20">{tech}</span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="bg-[var(--bg-surface)] p-6 rounded-lg border border-[var(--bg-surface)] shadow-sm hover:shadow-md transition-shadow">
-                      <h4 className="font-bold text-lg mb-2 text-[var(--brand-secondary)]">Case Study: Solving the N+1 Bottleneck</h4>
-                      <p className="text-[var(--text-muted)] mb-4">
-                        An enterprise Licensing Module (React, Node.js, Express) serving 10+ brands was suffering from critical performance degradation due to N+1 querying. I executed a complex refactor involving strategic MySQL indexing and query optimization, paired with a zero-downtime OpenSearch cluster re-indexing, resulting in lightning-fast search capabilities and significantly stabilized backend execution.
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {["OpenSearch", "MySQL", "React"].map(tech => (
-                          <span key={tech} className="px-3 py-1 rounded-lg text-xs font-mono bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] border border-[var(--brand-primary)]/20">{tech}</span>
-                        ))}
-                      </div>
+                  {/* Tech Stack */}
+                  <div className="pt-4 border-t border-[var(--bg-base)]">
+                    <div className="flex flex-wrap gap-2">
+                      {["AWS ECS", "Node.js", "Docker", "API Gateway", "Microservices", "DDD"].map(tech => (
+                        <span key={tech} className="px-3 py-1 rounded-lg text-xs font-mono bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] border border-[var(--brand-primary)]/20">{tech}</span>
+                      ))}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            {/* Case Study 2: ETL */}
+            <div id="case-etl" className="relative scroll-mt-32 animate-fade-in-up delay-100">
+              <div className="timeline-dot" style={{borderColor: 'var(--brand-secondary)'}}></div>
+              <div className="case-study-card bg-[var(--bg-surface)] rounded-lg border border-[var(--bg-surface)] overflow-hidden">
+                {/* Header */}
+                <div className="bg-gradient-to-r from-[var(--brand-secondary)]/10 to-transparent p-6 md:p-8 border-b border-[var(--bg-base)]">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-[var(--brand-secondary)]/15 text-[var(--brand-secondary)] border border-[var(--brand-secondary)]/20">Case Study</span>
+                    <span className="text-xs font-mono text-[var(--text-muted)]">Ongoing</span>
+                  </div>
+                  <h4 className="text-xl md:text-2xl font-bold text-[var(--text-base)]">Distributed ETL at 300+ GB/hr</h4>
+                  <p className="text-sm text-[var(--text-muted)] mt-1">Zero-loss data pipelines across heterogeneous source systems</p>
+                </div>
+
+                {/* Body */}
+                <div className="p-6 md:p-8 space-y-6">
+                  {/* Challenge */}
+                  <div>
+                    <h5 className="text-sm font-bold uppercase tracking-wider text-[var(--brand-secondary)] mb-2">The Challenge</h5>
+                    <p className="text-[var(--text-muted)] leading-relaxed">
+                      Critical business data was fragmented across SQL databases, NoSQL stores, third-party APIs, and legacy flat-file exports. Manual reconciliation attempts were failing at scale — records were silently dropped during peak ingestion windows, leading to downstream reporting discrepancies affecting executive decision-making across 3 business units.
+                    </p>
+                  </div>
+
+                  {/* Approach */}
+                  <div>
+                    <h5 className="text-sm font-bold uppercase tracking-wider text-[var(--brand-secondary)] mb-2">Technical Approach</h5>
+                    <ul className="space-y-2 text-[var(--text-muted)]">
+                      <li className="flex gap-2"><span className="text-[var(--brand-secondary)] mt-1 shrink-0">▸</span>Designed a distributed Python ETL framework with pluggable connectors for SQL, NoSQL, REST APIs, and SFTP sources</li>
+                      <li className="flex gap-2"><span className="text-[var(--brand-secondary)] mt-1 shrink-0">▸</span>Implemented checkpointing and idempotent write patterns to guarantee exactly-once delivery semantics</li>
+                      <li className="flex gap-2"><span className="text-[var(--brand-secondary)] mt-1 shrink-0">▸</span>Built an automated reconciliation engine that validates record counts, checksums, and schema integrity after each batch</li>
+                      <li className="flex gap-2"><span className="text-[var(--brand-secondary)] mt-1 shrink-0">▸</span>Deployed on serverless infrastructure (AWS Lambda + Step Functions) to achieve elastic scaling without idle cost</li>
+                    </ul>
+                  </div>
+
+                  {/* Results */}
+                  <div>
+                    <h5 className="text-sm font-bold uppercase tracking-wider text-[var(--brand-secondary)] mb-3">Impact & Results</h5>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      <div className="text-center p-4 rounded-lg bg-[var(--bg-base)]">
+                        <div className="text-2xl font-bold text-[var(--brand-secondary)]">300+</div>
+                        <div className="text-xs text-[var(--text-muted)] mt-1">GB/hr throughput</div>
+                      </div>
+                      <div className="text-center p-4 rounded-lg bg-[var(--bg-base)]">
+                        <div className="text-2xl font-bold text-[var(--brand-secondary)]">0</div>
+                        <div className="text-xs text-[var(--text-muted)] mt-1">Records lost</div>
+                      </div>
+                      <div className="text-center p-4 rounded-lg bg-[var(--bg-base)]">
+                        <div className="text-2xl font-bold text-[var(--brand-secondary)]">3M+</div>
+                        <div className="text-xs text-[var(--text-muted)] mt-1">Records reconciled</div>
+                      </div>
+                      <div className="text-center p-4 rounded-lg bg-[var(--bg-base)]">
+                        <div className="text-2xl font-bold text-[var(--brand-secondary)]">3</div>
+                        <div className="text-xs text-[var(--text-muted)] mt-1">Business units served</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Tech Stack */}
+                  <div className="pt-4 border-t border-[var(--bg-base)]">
+                    <div className="flex flex-wrap gap-2">
+                      {["Python", "AWS Lambda", "Step Functions", "Docker", "PostgreSQL", "Serverless"].map(tech => (
+                        <span key={tech} className="px-3 py-1 rounded-lg text-xs font-mono bg-[var(--brand-secondary)]/10 text-[var(--brand-secondary)] border border-[var(--brand-secondary)]/20">{tech}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Case Study 3: N+1 */}
+            <div id="case-n1" className="relative scroll-mt-32 animate-fade-in-up delay-200">
+              <div className="timeline-dot" style={{borderColor: 'var(--brand-accent)'}}></div>
+              <div className="case-study-card bg-[var(--bg-surface)] rounded-lg border border-[var(--bg-surface)] overflow-hidden">
+                {/* Header */}
+                <div className="bg-gradient-to-r from-[var(--brand-accent)]/10 to-transparent p-6 md:p-8 border-b border-[var(--bg-base)]">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-[var(--brand-accent)]/15 text-[var(--brand-accent)] border border-[var(--brand-accent)]/20">Case Study</span>
+                    <span className="text-xs font-mono text-[var(--text-muted)]">10+ brands</span>
+                  </div>
+                  <h4 className="text-xl md:text-2xl font-bold text-[var(--text-base)]">Solving the N+1 Bottleneck</h4>
+                  <p className="text-sm text-[var(--text-muted)] mt-1">Performance rescue of a critical multi-brand licensing platform</p>
+                </div>
+
+                {/* Body */}
+                <div className="p-6 md:p-8 space-y-6">
+                  {/* Challenge */}
+                  <div>
+                    <h5 className="text-sm font-bold uppercase tracking-wider text-[var(--brand-accent)] mb-2">The Challenge</h5>
+                    <p className="text-[var(--text-muted)] leading-relaxed">
+                      An enterprise Licensing Module built with React and Node.js was serving 10+ brands but had reached a critical performance cliff. API response times had degraded to 8-12 seconds due to classic N+1 query patterns in the ORM layer. The OpenSearch cluster was returning stale results after a failed migration, and the team had deprioritized the growing technical debt for months.
+                    </p>
+                  </div>
+
+                  {/* Approach */}
+                  <div>
+                    <h5 className="text-sm font-bold uppercase tracking-wider text-[var(--brand-accent)] mb-2">Technical Approach</h5>
+                    <ul className="space-y-2 text-[var(--text-muted)]">
+                      <li className="flex gap-2"><span className="text-[var(--brand-accent)] mt-1 shrink-0">▸</span>Profiled all critical API paths using query analysis tooling to identify and map 47 distinct N+1 patterns</li>
+                      <li className="flex gap-2"><span className="text-[var(--brand-accent)] mt-1 shrink-0">▸</span>Implemented strategic MySQL composite indexes and rewrote hot-path queries into batch-loaded joins</li>
+                      <li className="flex gap-2"><span className="text-[var(--brand-accent)] mt-1 shrink-0">▸</span>Executed a zero-downtime OpenSearch cluster re-index using blue-green alias rotation</li>
+                      <li className="flex gap-2"><span className="text-[var(--brand-accent)] mt-1 shrink-0">▸</span>Added Redis caching layer for high-frequency read patterns and implemented cache invalidation via pub/sub</li>
+                    </ul>
+                  </div>
+
+                  {/* Results */}
+                  <div>
+                    <h5 className="text-sm font-bold uppercase tracking-wider text-[var(--brand-accent)] mb-3">Impact & Results</h5>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      <div className="text-center p-4 rounded-lg bg-[var(--bg-base)]">
+                        <div className="text-2xl font-bold text-[var(--brand-accent)]">95%</div>
+                        <div className="text-xs text-[var(--text-muted)] mt-1">Faster response</div>
+                      </div>
+                      <div className="text-center p-4 rounded-lg bg-[var(--bg-base)]">
+                        <div className="text-2xl font-bold text-[var(--brand-accent)]">47</div>
+                        <div className="text-xs text-[var(--text-muted)] mt-1">N+1s eliminated</div>
+                      </div>
+                      <div className="text-center p-4 rounded-lg bg-[var(--bg-base)]">
+                        <div className="text-2xl font-bold text-[var(--brand-accent)]">0</div>
+                        <div className="text-xs text-[var(--text-muted)] mt-1">Downtime minutes</div>
+                      </div>
+                      <div className="text-center p-4 rounded-lg bg-[var(--bg-base)]">
+                        <div className="text-2xl font-bold text-[var(--brand-accent)]">10+</div>
+                        <div className="text-xs text-[var(--text-muted)] mt-1">Brands stabilized</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Tech Stack */}
+                  <div className="pt-4 border-t border-[var(--bg-base)]">
+                    <div className="flex flex-wrap gap-2">
+                      {["OpenSearch", "MySQL", "Redis", "React", "Node.js", "Express"].map(tech => (
+                        <span key={tech} className="px-3 py-1 rounded-lg text-xs font-mono bg-[var(--brand-accent)]/10 text-[var(--brand-accent)] border border-[var(--brand-accent)]/20">{tech}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
