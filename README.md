@@ -1,6 +1,7 @@
 # Sushant Singh - Senior Software Engineer Portfolio 🚀
 
 This is my personal portfolio. If you wish to build a similar one, feel free to fork.
+Visit at [portfolio](https://sushantsingh.pages.dev)
 
 ## Features
 - **Dynamic Theming:** Seamless Cyber (Dark) and Vibrant (Light) mode transitions via Tailwind CSS v4.
@@ -20,6 +21,3 @@ npm run dev
 ```
 
 3. Open [http://localhost:3000](http://localhost:3000)
-
-## Security Note for Contributors
-The `.env.local` file is explicitly ignored in `.gitignore`. Never commit API keys or App Passwords directly to this repository.
