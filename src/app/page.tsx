@@ -1,6 +1,7 @@
 import React from 'react';
 import ParticleBackground from '@/components/ParticleBackground';
 import ContactForm from '@/components/ContactForm';
+import ExperienceSection from '@/components/ExperienceSection';
 
 export default function Home() {
   return (
@@ -69,64 +70,7 @@ export default function Home() {
         </section>
 
         {/* Experience Section */}
-        <section id="experience" className="scroll-mt-32">
-          <div className="flex items-center gap-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">Experience</h2>
-            <div className="h-px bg-[var(--bg-surface)] flex-grow mt-2"></div>
-          </div>
-
-          <div className="space-y-16">
-            {/* Deloitte Case Study 1 */}
-            <div className="relative pl-8 md:pl-0">
-              <div className="md:grid md:grid-cols-4 md:items-baseline gap-8">
-                <div className="md:col-span-1 text-[var(--text-muted)] font-mono text-sm mb-2 md:mb-0">
-                  Jul 2023 - Present
-                </div>
-                <div className="md:col-span-3">
-                  <h3 className="text-2xl font-bold text-[var(--text-base)]">Senior Backend Engineer <span className="text-[var(--brand-primary)]">@ Deloitte (Disruption Office)</span></h3>
-
-                  <div className="mt-6 space-y-8">
-                    <div className="bg-[var(--bg-surface)] p-6 rounded-lg border border-[var(--bg-surface)] shadow-sm hover:shadow-md transition-shadow">
-                      <h4 className="font-bold text-lg mb-2 text-[var(--brand-secondary)]">Case Study: 0-to-1 Microservices Platform</h4>
-                      <p className="text-[var(--text-muted)] mb-4">
-                        Legacy SAP/Salesforce systems were throttling operations. I architected and shipped a complete Node.js microservices platform on AWS in just 3 months. By decentralizing domain logic and implementing robust API gateways, we generated an estimated <strong>$400k in annual cost savings</strong> and drastically reduced operational latency.
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {["AWS", "Node.js", "Microservices"].map(tech => (
-                          <span key={tech} className="px-3 py-1 rounded-lg text-xs font-mono bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] border border-[var(--brand-primary)]/20">{tech}</span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="bg-[var(--bg-surface)] p-6 rounded-lg border border-[var(--bg-surface)] shadow-sm hover:shadow-md transition-shadow">
-                      <h4 className="font-bold text-lg mb-2 text-[var(--brand-secondary)]">Case Study: Distributed ETL at 300+ GB/hr</h4>
-                      <p className="text-[var(--text-muted)] mb-4">
-                        Data fragmentation across heterogeneous databases (SQL, NoSQL), external APIs, and flat files was leading to severe data loss. I designed distributed Python ETL pipelines processing 300+ GB/hr. Implementing automated reconciliation protocols across 3M+ records entirely eliminated data loss and provided teams with real-time, synchronized reporting.
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {["Python", "Docker", "Serverless"].map(tech => (
-                          <span key={tech} className="px-3 py-1 rounded-lg text-xs font-mono bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] border border-[var(--brand-primary)]/20">{tech}</span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="bg-[var(--bg-surface)] p-6 rounded-lg border border-[var(--bg-surface)] shadow-sm hover:shadow-md transition-shadow">
-                      <h4 className="font-bold text-lg mb-2 text-[var(--brand-secondary)]">Case Study: Solving the N+1 Bottleneck</h4>
-                      <p className="text-[var(--text-muted)] mb-4">
-                        An enterprise Licensing Module (React, Node.js, Express) serving 10+ brands was suffering from critical performance degradation due to N+1 querying. I executed a complex refactor involving strategic MySQL indexing and query optimization, paired with a zero-downtime OpenSearch cluster re-indexing, resulting in lightning-fast search capabilities and significantly stabilized backend execution.
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {["OpenSearch", "MySQL", "React"].map(tech => (
-                          <span key={tech} className="px-3 py-1 rounded-lg text-xs font-mono bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] border border-[var(--brand-primary)]/20">{tech}</span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <ExperienceSection />
 
         {/* Education Section */}
         <section id="education" className="scroll-mt-32">
