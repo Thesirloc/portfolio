@@ -19,7 +19,7 @@ export default function Navbar() {
           <a href="#experience" className="text-sm font-medium hover:text-[var(--brand-primary)] transition-colors">Experience</a>
           <a href="#projects" className="text-sm font-medium hover:text-[var(--brand-primary)] transition-colors">Projects</a>
           <a href="#connect" className="text-sm font-medium hover:text-[var(--brand-primary)] transition-colors">Connect</a>
-          <a href="/SushantSingh_Resume.pdf" target="_blank" rel="noreferrer" className="text-sm font-medium text-[var(--brand-secondary)] hover:opacity-80 transition-opacity">Résumé</a>
+          <a href="/Sushant_Singh_Resume_2026.pdf" target="_blank" rel="noreferrer" className="text-sm font-medium text-[var(--brand-secondary)] hover:opacity-80 transition-opacity">Résumé</a>
           <ThemeToggle />
         </div>
 
@@ -47,7 +47,7 @@ export default function Navbar() {
           <a href="#experience" onClick={() => setMenuOpen(false)} className="text-sm font-medium hover:text-[var(--brand-primary)] transition-colors">Experience</a>
           <a href="#projects" onClick={() => setMenuOpen(false)} className="text-sm font-medium hover:text-[var(--brand-primary)] transition-colors">Projects</a>
           <a href="#connect" onClick={() => setMenuOpen(false)} className="text-sm font-medium hover:text-[var(--brand-primary)] transition-colors">Connect</a>
-          <a href="/SushantSingh_Resume.pdf" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)} className="text-sm font-medium text-[var(--brand-secondary)] hover:opacity-80 transition-opacity">Résumé</a>
+          <a href="/Sushant_Singh_Resume_2026.pdf" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)} className="text-sm font-medium text-[var(--brand-secondary)] hover:opacity-80 transition-opacity">Résumé</a>
         </div>
       )}
     </nav>
