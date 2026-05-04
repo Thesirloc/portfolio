@@ -17,7 +17,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-6">
           <a href="#about" className="text-sm font-medium hover:text-[var(--brand-primary)] transition-colors">About</a>
           <a href="#experience" className="text-sm font-medium hover:text-[var(--brand-primary)] transition-colors">Experience</a>
-          <a href="#projects" className="text-sm font-medium hover:text-[var(--brand-primary)] transition-colors">Projects</a>
+          <a href="#education" className="text-sm font-medium hover:text-[var(--brand-primary)] transition-colors">Education</a>
           <a href="#connect" className="text-sm font-medium hover:text-[var(--brand-primary)] transition-colors">Connect</a>
           <a href="/Sushant_Singh_Resume_2026.pdf" target="_blank" rel="noreferrer" className="text-sm font-medium text-[var(--brand-secondary)] hover:opacity-80 transition-opacity">Résumé</a>
           <ThemeToggle />
@@ -45,7 +45,7 @@ export default function Navbar() {
         <div className="md:hidden mt-4 pb-4 border-t border-[var(--bg-surface)] pt-4 flex flex-col gap-4 max-w-6xl mx-auto">
           <a href="#about" onClick={() => setMenuOpen(false)} className="text-sm font-medium hover:text-[var(--brand-primary)] transition-colors">About</a>
           <a href="#experience" onClick={() => setMenuOpen(false)} className="text-sm font-medium hover:text-[var(--brand-primary)] transition-colors">Experience</a>
-          <a href="#projects" onClick={() => setMenuOpen(false)} className="text-sm font-medium hover:text-[var(--brand-primary)] transition-colors">Projects</a>
+          <a href="#education" onClick={() => setMenuOpen(false)} className="text-sm font-medium hover:text-[var(--brand-primary)] transition-colors">Education</a>
           <a href="#connect" onClick={() => setMenuOpen(false)} className="text-sm font-medium hover:text-[var(--brand-primary)] transition-colors">Connect</a>
           <a href="/Sushant_Singh_Resume_2026.pdf" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)} className="text-sm font-medium text-[var(--brand-secondary)] hover:opacity-80 transition-opacity">Résumé</a>
         </div>

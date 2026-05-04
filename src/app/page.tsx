@@ -128,47 +128,48 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Projects Section */}
-        <section id="projects" className="scroll-mt-32">
+        {/* Education Section */}
+        <section id="education" className="scroll-mt-32">
           <div className="flex items-center gap-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">Featured Projects</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">Education</h2>
             <div className="h-px bg-[var(--bg-surface)] flex-grow mt-2"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Main Placeholder Project */}
-            <div className="col-span-1 md:col-span-2 group relative bg-gradient-to-br from-[var(--bg-surface)] to-[var(--bg-base)] p-1 rounded-lg border border-[var(--brand-secondary)]/30 overflow-hidden hover:border-[var(--brand-primary)] transition-colors duration-500">
-              <div className="absolute inset-0 bg-gradient-to-r from-[var(--brand-primary)]/10 to-[var(--brand-secondary)]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative bg-[var(--bg-surface)] h-full p-8 md:p-12 rounded-lg">
-                <div className="flex justify-between items-start mb-6">
-                  <div>
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="px-3 py-1 bg-[var(--brand-accent)]/20 text-[var(--brand-accent)] text-xs font-bold uppercase tracking-wider rounded-lg">In Active Development</span>
+          <div className="space-y-16">
+            <div className="relative pl-8 md:pl-0">
+              <div className="md:grid md:grid-cols-4 md:items-baseline gap-8">
+                <div className="md:col-span-1 text-[var(--text-muted)] font-mono text-sm mb-2 md:mb-0">
+                  2019 - 2023
+                </div>
+                <div className="md:col-span-3">
+                  <h3 className="text-2xl font-bold text-[var(--text-base)]">Bachelor of Technology <span className="text-[var(--brand-primary)]">@ IIT Guwahati</span></h3>
+
+                  <div className="mt-6 space-y-8">
+                    <div className="bg-[var(--bg-surface)] p-6 rounded-lg border border-[var(--bg-surface)] shadow-sm hover:shadow-md transition-shadow">
+                      <div className="flex items-center justify-between mb-2">
+                        <h4 className="font-bold text-lg text-[var(--brand-secondary)]">Minor: Mathematics & Computing</h4>
+                        <span className="px-3 py-1 bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] border border-[var(--brand-primary)]/20 text-xs font-bold rounded-full">Core Competency</span>
+                      </div>
+                      <p className="text-[var(--text-muted)] mb-4">
+                        A rigorous foundation in algorithms, advanced data structures, and mathematical modeling. This coursework forms the backbone of my ability to design scalable distributed systems, optimize complex queries, and build efficient microservices architecture.
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {["Algorithms", "Data Structures", "Math Modeling"].map(tech => (
+                          <span key={tech} className="px-3 py-1 rounded-lg text-xs font-mono bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] border border-[var(--brand-primary)]/20">{tech}</span>
+                        ))}
+                      </div>
                     </div>
-                    <h3 className="text-3xl font-extrabold text-[var(--text-base)]">Distributed Event-Streaming Engine</h3>
+
+                    <div className="bg-[var(--bg-surface)] p-6 rounded-lg border border-[var(--bg-surface)] shadow-sm hover:shadow-md transition-shadow">
+                      <div className="flex items-center justify-between mb-2">
+                        <h4 className="font-bold text-lg text-[var(--brand-secondary)]">Major: Chemical Science and Technology</h4>
+                        <span className="px-3 py-1 bg-[var(--brand-accent)]/10 text-[var(--brand-accent)] border border-[var(--brand-accent)]/20 text-xs font-bold rounded-full">Department Rank 2</span>
+                      </div>
+                      <p className="text-[var(--text-muted)] mb-4">
+                        Graduated with top honors, demonstrating a strong capacity for analytical thinking and rigorous problem-solving.
+                      </p>
+                    </div>
                   </div>
-                  <a href="#" className="text-[var(--brand-primary)] hover:text-[var(--brand-secondary)] transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                  </a>
-                </div>
-                <p className="text-[var(--text-muted)] text-lg mb-8 leading-relaxed">
-                  Currently designing an end-to-end distributed event processing architecture capable of ingesting and transforming millions of real-time events. This project demonstrates deep technical depth in handling concurrency, fault tolerance, and message queuing at massive scale.
-                </p>
-                <div className="grid md:grid-cols-2 gap-6 text-sm">
-                  <div>
-                    <strong className="block text-[var(--text-base)] mb-1">Architecture Highlights:</strong>
-                    <ul className="list-disc list-inside text-[var(--text-muted)] space-y-1">
-                      <li>Horizontal scaling via Docker/Kubernetes</li>
-                      <li>Zero-data loss dead-letter queues</li>
-                      <li>Low-latency consensus and processing</li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="mt-8 flex gap-2 flex-wrap">
-                  <span className="px-3 py-1 bg-[var(--bg-base)] text-[var(--text-muted)] font-mono text-xs rounded-md border border-[var(--text-muted)]/20">Rust</span>
-                  <span className="px-3 py-1 bg-[var(--bg-base)] text-[var(--text-muted)] font-mono text-xs rounded-md border border-[var(--text-muted)]/20">Kafka</span>
-                  <span className="px-3 py-1 bg-[var(--bg-base)] text-[var(--text-muted)] font-mono text-xs rounded-md border border-[var(--text-muted)]/20">Redis</span>
-                  <span className="px-3 py-1 bg-[var(--bg-base)] text-[var(--text-muted)] font-mono text-xs rounded-md border border-[var(--text-muted)]/20">PostgreSQL</span>
                 </div>
               </div>
             </div>
@@ -187,30 +188,35 @@ export default function Home() {
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">Let's build<br />something <span className="text-[var(--brand-secondary)]">great.</span></h2>
               <p className="text-xl text-[var(--text-muted)] mb-8">
-                <strong className="text-[var(--text-base)]">I read every single message.</strong> Whether you're recruiting for a high-velocity startup, looking for a technical co-founder, or just want to chat about system architecture—drop a line.
+                I'm always open to discussing new ideas, system architecture, or just geeking out about tech. Feel free to drop a line.
               </p>
 
-              <div className="space-y-6">
-                <a href="mailto:sunsinghny01@gmail.com" className="flex items-center gap-4 text-[var(--text-base)] hover:text-[var(--brand-primary)] transition-colors group">
-                  <div className="w-12 h-12 rounded-full bg-[var(--bg-surface)] border border-[var(--bg-base)] flex items-center justify-center group-hover:scale-110 group-hover:border-[var(--brand-primary)] transition-all">
+              <div className="space-y-8">
+                <div className="flex flex-wrap gap-4">
+                  <a href="mailto:sunsinghny01@gmail.com" title="Email" className="w-12 h-12 rounded-full bg-[var(--bg-surface)] border border-[var(--bg-surface)] flex items-center justify-center text-[var(--text-base)] hover:scale-110 hover:shadow-md transition-all">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                  </div>
-                  <span className="font-medium text-lg">sunsinghny01@gmail.com</span>
-                </a>
+                  </a>
 
-                <a href="https://www.linkedin.com/in/sushant-i-singh/" target="_blank" rel="noreferrer" className="flex items-center gap-4 text-[var(--text-base)] hover:text-[var(--brand-primary)] transition-colors group">
-                  <div className="w-12 h-12 rounded-full bg-[var(--bg-surface)] border border-[var(--bg-base)] flex items-center justify-center group-hover:scale-110 group-hover:border-[var(--brand-primary)] transition-all">
+                  <a href="https://www.linkedin.com/in/sushant-i-singh/" target="_blank" rel="noreferrer" title="LinkedIn" className="w-12 h-12 rounded-full bg-[var(--bg-surface)] border border-[var(--bg-surface)] flex items-center justify-center text-[#0A66C2] hover:scale-110 hover:shadow-md transition-all">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                  </div>
-                  <span className="font-medium text-lg">LinkedIn</span>
-                </a>
+                  </a>
 
-                <a href="https://github.com/Thesirloc" target="_blank" rel="noreferrer" className="flex items-center gap-4 text-[var(--text-base)] hover:text-[var(--brand-primary)] transition-colors group">
-                  <div className="w-12 h-12 rounded-full bg-[var(--bg-surface)] border border-[var(--bg-base)] flex items-center justify-center group-hover:scale-110 group-hover:border-[var(--brand-primary)] transition-all">
+                  <a href="https://github.com/Thesirloc" target="_blank" rel="noreferrer" title="GitHub" className="w-12 h-12 rounded-full bg-[var(--bg-surface)] border border-[var(--bg-surface)] flex items-center justify-center text-black dark:text-white hover:scale-110 hover:shadow-md transition-all">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                  </div>
-                  <span className="font-medium text-lg">GitHub</span>
-                </a>
+                  </a>
+
+                  <a href="https://x.com/thisSushant" target="_blank" rel="noreferrer" title="X (Twitter)" className="w-12 h-12 rounded-full bg-[var(--bg-surface)] border border-[var(--bg-surface)] flex items-center justify-center text-black dark:text-white hover:scale-110 hover:shadow-md transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+                  </a>
+
+                  <a href="https://discord.com/users/567744754293407765" target="_blank" rel="noreferrer" title="Discord" className="w-12 h-12 rounded-full bg-[var(--bg-surface)] border border-[var(--bg-surface)] flex items-center justify-center text-[#5865F2] hover:scale-110 hover:shadow-md transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M8 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M14 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M15.5 17c0 1 1.5 3 2 3c1.5 0 2.833 -1.667 3.5 -3c.667 -1.667 .5 -5.833 -1.5 -11.5c-1.457 -1.015 -3 -1.34 -4.5 -1.5l-1 2.5l-2 1l-2 -1l-1 -2.5c-1.5 .16 -3.043 .485 -4.5 1.5c-2 5.667 -2.167 9.833 -1.5 11.5c.667 1.333 2 3 3.5 3c.5 0 2 -2 2 -3" /><path d="M7 16.5c3.5 2 6.5 2 10 0" /></svg>
+                  </a>
+
+                  <a href="https://www.reddit.com/user/Imaginary-Spinach-59/" target="_blank" rel="noreferrer" title="Reddit" className="w-12 h-12 rounded-full bg-[var(--bg-surface)] border border-[var(--bg-surface)] flex items-center justify-center text-[#FF4500] hover:scale-110 hover:shadow-md transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 8c2.648 0 5.028 .826 6.675 2.14a2.5 2.5 0 0 1 2.326 4.36c0 3.59 -4.03 6.5 -9 6.5c-4.875 0 -8.845 -2.8 -9 -6.294l-1 -.206a2.5 2.5 0 0 1 2.326 -4.36c1.646 -1.313 4.026 -2.14 6.674 -2.14z" /><path d="M12 8l1 -5l6 1" /><circle cx="19" cy="4" r="1" /><circle cx="9" cy="13" r=".5" fill="currentColor" /><circle cx="15" cy="13" r=".5" fill="currentColor" /><path d="M10 17c.667 .333 1.333 .5 2 .5s1.333 -.167 2 -.5" /></svg>
+                  </a>
+                </div>
               </div>
             </div>
 
