@@ -1,6 +1,6 @@
 # Sushant Singh - Senior Software Engineer Portfolio 🚀
 
-This is my personal portfolio. If you wish to build a similar one, feel free to fork.
+This is my personal portfolio.
 Visit at [portfolio](https://sushantsingh.pages.dev)
 
 ## Features
